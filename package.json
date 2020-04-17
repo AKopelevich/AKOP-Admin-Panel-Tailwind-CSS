@@ -1,0 +1,48 @@
+{
+  "name": "akop-admin-panel-tailwind-css",
+  "version": "1.0.0",
+  "description": "Tailwind CSS minimal admin panel – base for AKOP Core app",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "NODE_ENV=production postcss ./resources/css/app.css -o ./public/css/app.css",
+    "build:css-dev": "NODE_ENV=development postcss ./resources/css/app.css -o ./public/css/app.css",
+    "build:js": "node ./build.js > public/js/app.js",
+    "build:js-min": "terser ./public/js/app.js -o ./public/js/app.js -c -m",
+    "build": "npm run build:css && npm run build:js && npm run build:js-min && notify -t '[PRODUCTION] Build 📦', -m 'Successfully completed' --failsafe 1000",
+    "build-dev": "npm run build:css-dev && npm run build:js && notify -t '[DEV] Build 📦', -m 'Successfully completed' --failsafe 1000",
+    "watch": "onchange -iv './resources/js/**' './resources/css/**' --await-write-finish 1000 -- npm run build-dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AKopelevich/akop-admin-panel-tailwind-css.git"
+  },
+  "keywords": [],
+  "author": "Aleksandr Kopelevich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AKopelevich/akop-admin-panel-tailwind-css/issues"
+  },
+  "homepage": "https://github.com/AKopelevich/akop-admin-panel-tailwind-css#readme",
+  "dependencies": {
+    "autoprefixer": "^9.6.1",
+    "make-dir-cli": "^2.0.0",
+    "node-notifier": "^5.4.0",
+    "node-notifier-cli": "^1.1.2",
+    "node-waf": "^1.0.0",
+    "onchange": "^6.0.0",
+    "postcss-cli": "^6.1.3",
+    "tailwindcss": "^1.0.6",
+    "terser": "^4.6.11"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-minify": "^0.5.1",
+    "babel-preset-minify": "^0.5.0",
+    "babelify": "^10.0.0",
+    "browserify": "^16.3.0",
+    "cssnano": "^4.1.10",
+    "postcss-import": "^12.0.1"
+  }
+}

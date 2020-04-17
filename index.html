@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>AKOP Admin Panel & Tailwind CSS</title>
+        <link rel="stylesheet" href="./public/css/app.css">
+    </head>
+    <body class="bg-gray-100">
+        <div class="flex">
+            <!-- Left menu -->
+            <div id="left-menu"
+                 class="h-screen top-0 left-0 overflow-y-auto overflow-x-hidden text-sm bg-purple-800 hidden md:block sticky z-20"
+                 style="min-width: 250px; max-width: 250px; background: linear-gradient(40deg, #3e4ca5, #324b6d) !important">
+                <div
+                    class="bg-blue-900 h-16 justify-start pl-4 w-full flex items-center text-white shadow-sm text-center sticky top-0 text-xl md:text-2xl font-bold tracking-wide text-shadow-sm">
+                    AKOP <span class="font-medium pl-1">Core</span>
+                </div>
+                <div class="px-4">
+                    <div class="my-8"></div>
+                    <div class="text-gray-200 flex items-center">
+                        <svg class="fill-current text-green-500 w-8 h-8 mr-3" viewBox="0 0 20 20"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 20c5.523 0 10-4.477 10-10S15.523 0 10 0 0 4.477 0 10s4.477 10 10 10zM7 6.002A3.003 3.003 0 0 1 10 3c1.657 0 3 1.339 3 3.002v1.996A3.003 3.003 0 0 1 10 11c-1.657 0-3-1.339-3-3.002V6.002zm-3.653 8.442A15.941 15.941 0 0 1 10 13c2.374 0 4.627.517 6.653 1.444A7.992 7.992 0 0 1 10 18a7.992 7.992 0 0 1-6.653-3.556z"/>
+                        </svg>
+                        <div class="flex">
+                            <span>Aleksandr</span>
+                            <span class="p-1 ml-1">
+                <svg class="fill-current text-gray-500 hover:text-green-500 h-4" viewBox="0 0 20 20"
+                     xmlns="http://www.w3.org/2000/svg"><path
+                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                    fill-rule="evenodd"/></svg>
+            </span>
+                        </div>
+                    </div>
+                    <div class="my-8"></div>
+                    <ul class="text-center tracking-wide">
+                        <li>
+                            <a href="#"
+                               class="content-center group border-transparent border-l-4 block py-4 text-gray-200 hover:text-gray-100">
+                                <div class="flex items-center">
+                                    <svg
+                                        class="fill-current group-hover:text-green-400 group-hover:ml-1 duration-200 transition-all text-gray-500 h-3 w-3 mr-2"
+                                        viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0 0h9v9H0V0zm2 2h5v5H2V2zm-2 9h9v9H0v-9zm2 2h5v5H2v-5zm9-13h9v9h-9V0zm2 2h5v5h-5V2zm-2 9h9v9h-9v-9zm2 2h5v5h-5v-5z"
+                                            fill-rule="evenodd"/>
+                                    </svg>
+                                    <span>Settings</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="content-center group border-transparent border-l-4 block py-4 text-gray-200 hover:text-gray-100">
+                                <div class="flex items-center">
+                                    <svg
+                                        class="fill-current group-hover:text-green-400 group-hover:ml-1 duration-200 transition-all text-gray-500 h-3 w-3 mr-2"
+                                        viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0 3.994C0 2.893.896 2 1.997 2H9l2 2h7.003C19.106 4 20 4.897 20 6.006v9.988A2.003 2.003 0 0118.01 18H1.99C.892 18 0 17.105 0 16.006V3.994zM2 6h16v10H2V6z"
+                                            fill-rule="evenodd"/>
+                                    </svg>
+                                    <span class="font-normal">Clients & Contacts</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="content-center group border-transparent border-l-4 block py-4 text-gray-200 hover:text-gray-100">
+                                <div class="flex items-center">
+                                    <svg
+                                        class="fill-current group-hover:text-green-400 group-hover:ml-1 duration-200 transition-all text-gray-500 h-3 w-3 mr-2"
+                                        viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7 8a4 4 0 100-8 4 4 0 000 8zm0 1a17.93 17.93 0 00-6.109 1.086L2 16h1.25L4 20h6l.75-4H12l1.109-5.914A17.93 17.93 0 007 9zm8.315.171L13.66 18h-1.25l-.375 2H16l.75-4H18l1.109-5.914a18.211 18.211 0 00-3.794-.915zM13 0a3.99 3.99 0 00-1.329.243A5.964 5.964 0 0113 4a5.964 5.964 0 01-1.329 3.757c.418.147.86.243 1.329.243a4 4 0 000-8z"
+                                            fill-rule="evenodd"/>
+                                    </svg>
+                                    <span>Users</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /Left menu -->
+            <!-- Content -->
+            <div class="md:px-4 min-w-0 flex-1">
+                <div
+                    class="md:-mx-4 px-4 border-b border-gray-300 flex justify-between text-lg text-gray-700 font-thin flex items-center px-2 h-16 top-0 sticky bg-white z-10 mb-4"
+                    style="box-shadow: 0 2px 2px rgba(0,0,0,.03), 0 1px 0 rgba(0,0,0,.03)">
+                    <div class="flex items-center">
+                        <svg class="fill-current text-gray-500 h-6 w-6 mr-4 float-left hidden md:block"
+                             viewBox="0 0 20 20"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0 3.994C0 2.893.893 2 1.995 2h15.012c.548 0 .993.444.993 1v1H2v1h17.007c.548 0 .993.447.993.999v9.998A2.001 2.001 0 0 1 18.01 18H1.99C.892 18 0 17.105 0 16.006V3.994zM16.5 13a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                        </svg>
+
+                        <h1 class="text-lg font-normal">Hello World!</h1>
+                        <span class="text-2xl mx-3 font-thin text-gray-400">|</span>
+                        <div class="flex items-center pt-1">
+                            <span class="flex text-xs text-gray-600">450 contacts</span>
+                            <div class="group active:shadow-inner ml-4 bg-gray-200 rounded-full p-2">
+                                <svg class="fill-current text-gray-500 w-4 h-4 group-hover:text-gray-600"
+                                     viewBox="0 0 20 20"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.906 14.32a8 8 0 111.414-1.414l5.337 5.337-1.414 1.414-5.337-5.337zM8 14A6 6 0 108 2a6 6 0 000 12z"
+                                        fill-rule="evenodd"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex inline-flex justify-between text-sm">
+                        <div class="relative hidden md:inline-block">
+                            <input type="text" id="page-title-search" class="outline-none p-3 rounded border bg-gray-100 text-gray-500 py-2 tracking-wide pr-10 focus:border-gray-500" placeholder="Search...">
+                            <a data-input-id="page-title-search" class="js-execute-search absolute inset-y-0 right-0 flex items-center px-2 text-gray-400 hover:text-gray-700 cursor-pointer">
+                                <svg class="fill-current w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.906 14.32a8 8 0 111.414-1.414l5.337 5.337-1.414 1.414-5.337-5.337zM8 14A6 6 0 108 2a6 6 0 000 12z" fill-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <a href="javascript:void(0)" class="hidden hover:shadow md:flex ml-2 bg-green-400 font-normal text-green-700 border border-green-500 rounded px-3 items-center">
+                            Add project
+                        </a>
+                    </div>
+
+                </div>
+
+                <p class="mt-1 mb-0 text-gray-500 font-thin text-sm">Just a subtitle – if needed</p>
+
+                <div class="my-4"></div>
+
+                <div class="flex flex-col md:flex-row md:h-64">
+                    <div class="w-full md:w-1/3 p-2">
+                        <div class="bg-green-300 shadow rounded-md p-0 flex flex-col w-full h-full">
+                            <span class="text-green-800 w-full p-4 border-b border-gray-300 top-0">Just a header</span>
+                            <ul class="overflow-y-auto w-full h-64 rounded-b-md text-sm text-gray-700">
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="w-full md:w-1/3 p-2">
+                        <div class="bg-green-300 shadow rounded-md p-0 flex flex-col w-full h-full">
+                            <span class="text-green-800 w-full p-4 border-b border-gray-300 top-0">Just a header</span>
+                            <ul class="overflow-y-auto w-full h-64 rounded-b-md text-sm text-gray-700">
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="w-full md:w-1/3 p-2">
+                        <div class="bg-green-300 shadow rounded-md p-0 flex flex-col w-full h-full">
+                            <span class="text-green-800 w-full p-4 border-b border-gray-300 top-0">Just a header</span>
+                            <ul class="overflow-y-auto w-full h-64 rounded-b-md text-sm text-gray-700">
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="my-4"></div>
+
+                <div class="flex flex-col md:flex-row md:h-64">
+                    <div class="w-full md:w-1/3 p-2">
+                        <div class="bg-green-300 shadow rounded-md p-0 flex flex-col w-full h-full">
+                            <span class="text-green-800 w-full p-4 border-b border-gray-300 top-0">Just a header</span>
+                            <ul class="overflow-y-auto w-full h-64 rounded-b-md text-sm text-gray-700">
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="w-full md:w-1/3 p-2">
+                        <div class="bg-green-300 shadow rounded-md p-0 flex flex-col w-full h-full">
+                            <span class="text-green-800 w-full p-4 border-b border-gray-300 top-0">Just a header</span>
+                            <ul class="overflow-y-auto w-full h-64 rounded-b-md text-sm text-gray-700">
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="w-full md:w-1/3 p-2">
+                        <div class="bg-green-300 shadow rounded-md p-0 flex flex-col w-full h-full">
+                            <span class="text-green-800 w-full p-4 border-b border-gray-300 top-0">Just a header</span>
+                            <ul class="overflow-y-auto w-full h-64 rounded-b-md text-sm text-gray-700">
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-white border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                                <li class="bg-gray-100 border-b border-gray-200 p-2">Test item</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Content -->
+        </div>
+    </body>
+    <script src="public/js/app.js"></script>
+</html>
