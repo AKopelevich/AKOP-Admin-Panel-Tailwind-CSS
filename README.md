@@ -20,8 +20,6 @@ Install all the NPM packages, running
 
 `npm run watch`
 
----
-
 ## To-do
 
 - [x] Basic HTML
