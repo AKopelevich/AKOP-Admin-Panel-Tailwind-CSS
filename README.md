@@ -1,7 +1,7 @@
 # AKOP Admin Panel & Tailwind CSS
 Tailwind CSS minimal admin panel – base for AKOP Core app
 
-![AKOP Core Screen](https://s3-us-west-2.amazonaws.com/img.akop.com.br/akop-core-admin-tailwind-css.png)
+![AKOP Core Screen](https://s3-us-west-2.amazonaws.com/img.akop.com.br/marketing/akop-core-admin-tailwind-css.png)
 
 **Setup**
 
