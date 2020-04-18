@@ -26,7 +26,7 @@ Install all the NPM packages, running
 ## To-do
 
 - [x] Basic HTML
-- [ ] Remove unused classes with PurgeCSS
+- [x] Remove unused classes with PurgeCSS
 - [ ] Add JavaScript powered side menu toggle in mobile view
 
 ---
