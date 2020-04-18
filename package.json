@@ -8,9 +8,9 @@
     "build:css-dev": "NODE_ENV=development postcss ./resources/css/app.css -o ./public/css/app.css",
     "build:js": "node ./build.js > public/js/app.js",
     "build:js-min": "terser ./public/js/app.js -o ./public/js/app.js -c -m",
-    "build": "npm run build:css && npm run build:js && npm run build:js-min && notify -t '[PRODUCTION] Build 📦', -m 'Successfully completed' --failsafe 1000",
-    "build-dev": "npm run build:css-dev && npm run build:js && notify -t '[DEV] Build 📦', -m 'Successfully completed' --failsafe 1000",
-    "watch": "onchange -iv './resources/js/**' './resources/css/**' --await-write-finish 1000 -- npm run build-dev"
+    "prod": "npm run build:css && npm run build:js && npm run build:js-min && notify -t '[PRODUCTION] Build 📦', -m 'Successfully completed' --failsafe 1000",
+    "dev": "npm run build:css-dev && npm run build:js && notify -t '[DEV] Build 📦', -m 'Successfully completed' --failsafe 1000",
+    "watch": "onchange -iv './*.js' './resources/js/**' './resources/css/**' --await-write-finish 1000 -- npm run dev"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,7 @@
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "@fullhuman/postcss-purgecss": "^2.1.2",
     "babel-minify": "^0.5.1",
     "babel-preset-minify": "^0.5.0",
     "babelify": "^10.0.0",
