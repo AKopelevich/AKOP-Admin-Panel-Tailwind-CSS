@@ -8,17 +8,20 @@ Tailwind CSS minimal admin panel – base for AKOP Core app
 Install all the NPM packages, running
  `npm i` in your terminal
 
-**Compile CSS & JS (_without_ compression)**
+**Compile CSS & JS (_without_ compression > for your development environment)**
  
-`npm run build-dev`
+`npm run dev`
 
-**Compile CSS & JS (_with_ compression)**
+**Compile CSS & JS (_with_ compression > for your production environment)**
  
-`npm run build`
+`npm run prod`
 
-**Watch your `/resources` folder for changes and compile them in DEV mode (_without_ compression)** 
+**Watch your `/resources` and `root` folders for changes and compile them in DEV mode (_without_ compression)** 
+
+> Only .js files will be watched in the root folder
 
 `npm run watch`
+
 
 ## To-do
 
