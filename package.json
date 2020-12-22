@@ -26,7 +26,7 @@
   "dependencies": {
     "autoprefixer": "^9.6.1",
     "make-dir-cli": "^2.0.0",
-    "node-notifier": "^5.4.0",
+    "node-notifier": "^8.0.1",
     "node-notifier-cli": "^1.1.2",
     "node-waf": "^1.0.0",
     "onchange": "^6.0.0",
